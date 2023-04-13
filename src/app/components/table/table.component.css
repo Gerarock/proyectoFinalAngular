@@ -1,0 +1,11 @@
+.m-50 {
+    margin: 50px;
+}
+
+mat-table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}

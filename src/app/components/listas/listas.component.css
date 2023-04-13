@@ -1,0 +1,19 @@
+.rojo {
+    background-color: red;
+    color: white;
+    font-size: 25px;
+}
+
+.pb-35 {
+    margin: 0px;
+    padding-bottom: 35px;
+    font-size: x-large;
+}
+
+.m-50 {
+    margin: 50px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}

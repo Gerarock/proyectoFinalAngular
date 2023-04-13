@@ -1,0 +1,40 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened class="mat-elevation-z8">
+    <img src="../../../assets/img/alumno-3.png" class="avatar mat-elevation-z8">
+    <h4 class="name">Gerardo Veliz</h4>
+    <p class="nameAccount">Administrador</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-buttom" routerLink="cards">
+      <mat-icon routerLinkActive="activebutton">home</mat-icon>
+      <span routerLinkActive="activebutton">Inicio</span>
+    </button>
+    <button mat-button class="menu-buttom" routerLink="list">
+      <mat-icon routerLinkActive="activebutton">person</mat-icon>
+      <span routerLinkActive="activebutton">Alumnos</span>
+    </button>
+    <button mat-button class="menu-buttom" routerLink="form">
+      <mat-icon routerLinkActive="activebutton">edit</mat-icon>
+      <span routerLinkActive="activebutton">Mantenedor</span>
+    </button>
+    <button mat-button class="menu-buttom" routerLink="table">
+      <mat-icon routerLinkActive="activebutton">edit</mat-icon>
+      <span routerLinkActive="activebutton">Mantenedor</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-buttom">
+      <mat-icon>close</mat-icon>
+      <span>Salir</span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
