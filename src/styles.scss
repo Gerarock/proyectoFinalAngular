@@ -1,45 +1,11 @@
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
-@import "primeicons/primeicons.css";
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-    text-decoration: none;
-    color: #000000;
+html,
+body {
+    height: 100%;
 }
 
-header {
-    padding: 25px;
-}
-
-footer {
-    text-align: center;
-    background-color: lightcoral;
-    padding: 25px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    font-size: 18px;
-}
-
-.contenedor {
-    display: flex;
-}
-
-.text-white {
-    color: white;
-}
-
-.activebutton {
-    color: crimson !important;
-}
-
-.btn-success {
-    --bs-btn-disabled-bg: #6c757d !important;
-    --bs-btn-disabled-border-color: #6c757d !important;
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 html,
@@ -52,6 +18,10 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* .mat-drawer-container {
-    background-color: white !important;
-} */
+.mat-mdc-form-field-hint-wrapper, .mat-mdc-form-field-error-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 5px !important;
+}

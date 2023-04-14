@@ -1,0 +1,124 @@
+<mat-card>
+  <mat-card-content>
+    <form (ngSubmit)="addAlumn()" [formGroup]="formAddAlumn" class="container">
+
+      <div class="title" appFontSize>Agregar Alumno </div>
+
+      <mat-grid-list cols="3" rowHeight="5:1">
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre" type="text" placeholder="ingrese el nombre">
+            <mat-error
+              *ngIf="formAddAlumn.controls['nombre'].invalid && (formAddAlumn.controls['nombre'].touched || formAddAlumn.controls['nombre'].dirty)">
+              <span *ngIf="formAddAlumn.controls['nombre'].errors?.['required']">Este campo es requerido
+              </span>
+              <span *ngIf="formAddAlumn.controls['nombre'].errors?.['maxlength']">Maximo 30 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['nombre'].errors?.['minlength']">Minimo 3 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['nombre'].errors?.['pattern']">Debe ingresar solo letras.
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="apellido" type="text" placeholder="ingrese el apellido">
+            <mat-error
+              *ngIf="formAddAlumn.controls['apellido'].invalid && (formAddAlumn.controls['apellido'].touched || formAddAlumn.controls['apellido'].dirty)">
+              <span *ngIf="formAddAlumn.controls['apellido'].errors?.['required']">Este campo es requerido
+              </span>
+              <span *ngIf="formAddAlumn.controls['apellido'].errors?.['maxlength']">Maximo 30 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['apellido'].errors?.['minlength']">Minimo 3 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['apellido'].errors?.['pattern']">Debe ingresar solo letras.
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="text" placeholder="ingrese el email">
+            <mat-error
+              *ngIf="formAddAlumn.controls['email'].invalid && (formAddAlumn.controls['email'].touched || formAddAlumn.controls['email'].dirty)">
+              <span *ngIf="formAddAlumn.controls['email'].errors?.['required']">Este campo es requerido
+              </span>
+              <span *ngIf="formAddAlumn.controls['email'].errors?.['maxlength']">Maximo 40 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['email'].errors?.['minlength']">Minimo 3 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['email'].errors?.['pattern']">Email inválido.
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Edad</mat-label>
+            <input matInput formControlName="edad" type="text" placeholder="ingrese la edad">
+            <mat-error
+              *ngIf="formAddAlumn.controls['edad'].invalid && (formAddAlumn.controls['edad'].touched || formAddAlumn.controls['edad'].dirty)">
+              <span *ngIf="formAddAlumn.controls['edad'].errors?.['required']">Este campo es requerido
+              </span>
+              <span *ngIf="formAddAlumn.controls['edad'].errors?.['maxlength']">Maximo 2 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['edad'].errors?.['minlength']">Minimo 2 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['edad'].errors?.['pattern']">Debe ingresar solo números.
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Dirección</mat-label>
+            <input matInput formControlName="direccion" type="text" placeholder="ingrese la direccion">
+            <mat-error
+              *ngIf="formAddAlumn.controls['direccion'].invalid && (formAddAlumn.controls['direccion'].touched || formAddAlumn.controls['direccion'].dirty)">
+              <span *ngIf="formAddAlumn.controls['direccion'].errors?.['required']">Este campo es requerido
+              </span>
+              <span *ngIf="formAddAlumn.controls['direccion'].errors?.['maxlength']">Maximo 30 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['direccion'].errors?.['minlength']">Minimo 3 caracteres.
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Teléfono</mat-label>
+            <input matInput formControlName="telefono" type="text" placeholder="ingrese un teléfono">
+            <mat-error
+              *ngIf="formAddAlumn.controls['telefono'].invalid && (formAddAlumn.controls['telefono'].touched || formAddAlumn.controls['telefono'].dirty)">
+              <span *ngIf="formAddAlumn.controls['telefono'].errors?.['required']">Este campo es requerido
+              </span>
+              <span *ngIf="formAddAlumn.controls['telefono'].errors?.['maxlength']">Maximo 10 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['telefono'].errors?.['minlength']">Minimo 7 caracteres.
+              </span>
+              <span *ngIf="formAddAlumn.controls['telefono'].errors?.['pattern']">Teléfono inválido.
+              </span>
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <br><br><br><br>
+        <mat-grid-tile>
+          <div mat-dialog-actions class="position-button">
+            <button color="accent" type="submit" mat-raised-button [disabled]="!formAddAlumn.valid">
+              Insertar Alumno
+            </button>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </mat-card-content>
+</mat-card>

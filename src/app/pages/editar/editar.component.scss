@@ -1,0 +1,33 @@
+mat-form-field {
+  margin: 0 10px;
+}
+
+.position-button {
+  justify-content: flex-end;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 1rem;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+}
+
+h3 {
+  margin: 0;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 20px;
+}

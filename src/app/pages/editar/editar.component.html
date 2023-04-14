@@ -1,0 +1,110 @@
+<h1 mat-dialog-title>Editar alumno</h1>
+<form (ngSubmit)="editAlumn()" [formGroup]="formEditAlumn" class="container">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" type="text" placeholder="ingrese el nombre">
+    <mat-error
+      *ngIf="formEditAlumn.controls['nombre'].invalid && (formEditAlumn.controls['nombre'].touched || formEditAlumn.controls['nombre'].dirty)">
+      <span *ngIf="formEditAlumn.controls['nombre'].errors?.['required']">Este campo es requerido
+      </span>
+      <span *ngIf="formEditAlumn.controls['nombre'].errors?.['maxlength']">Maximo 30 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['nombre'].errors?.['minlength']">Minimo 3 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['nombre'].errors?.['pattern']">Debe ingresar solo letras.
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Apellido</mat-label>
+    <input matInput formControlName="apellido" type="text" placeholder="ingrese el apellido">
+    <mat-error
+      *ngIf="formEditAlumn.controls['apellido'].invalid && (formEditAlumn.controls['apellido'].touched || formEditAlumn.controls['apellido'].dirty)">
+      <span *ngIf="formEditAlumn.controls['apellido'].errors?.['required']">Este campo es requerido
+      </span>
+      <span *ngIf="formEditAlumn.controls['apellido'].errors?.['maxlength']">Maximo 30 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['apellido'].errors?.['minlength']">Minimo 3 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['apellido'].errors?.['pattern']">Debe ingresar solo letras.
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" type="text" placeholder="ingrese el email">
+    <mat-error
+      *ngIf="formEditAlumn.controls['email'].invalid && (formEditAlumn.controls['email'].touched || formEditAlumn.controls['email'].dirty)">
+      <span *ngIf="formEditAlumn.controls['email'].errors?.['required']">Este campo es requerido
+      </span>
+      <span *ngIf="formEditAlumn.controls['email'].errors?.['maxlength']">Maximo 40 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['email'].errors?.['minlength']">Minimo 3 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['email'].errors?.['pattern']">Email inválido.
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Edad</mat-label>
+    <input matInput formControlName="edad" type="text" placeholder="ingrese la edad">
+    <mat-error
+      *ngIf="formEditAlumn.controls['edad'].invalid && (formEditAlumn.controls['edad'].touched || formEditAlumn.controls['edad'].dirty)">
+      <span *ngIf="formEditAlumn.controls['edad'].errors?.['required']">Este campo es requerido
+      </span>
+      <span *ngIf="formEditAlumn.controls['edad'].errors?.['maxlength']">Maximo 2 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['edad'].errors?.['minlength']">Minimo 2 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['edad'].errors?.['pattern']">Debe ingresar solo números.
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Dirección</mat-label>
+    <input matInput formControlName="direccion" type="text" placeholder="ingrese la direccion">
+    <mat-error
+      *ngIf="formEditAlumn.controls['direccion'].invalid && (formEditAlumn.controls['direccion'].touched || formEditAlumn.controls['direccion'].dirty)">
+      <span *ngIf="formEditAlumn.controls['direccion'].errors?.['required']">Este campo es requerido
+      </span>
+      <span *ngIf="formEditAlumn.controls['direccion'].errors?.['maxlength']">Maximo 30 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['direccion'].errors?.['minlength']">Minimo 3 caracteres.
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Imagen</mat-label>
+    <input matInput formControlName="imagen" type="text" placeholder="ingrese una imagen">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Teléfono</mat-label>
+    <input matInput formControlName="telefono" type="text" placeholder="ingrese un teléfono">
+    <mat-error
+      *ngIf="formEditAlumn.controls['telefono'].invalid && (formEditAlumn.controls['telefono'].touched || formEditAlumn.controls['telefono'].dirty)">
+      <span *ngIf="formEditAlumn.controls['telefono'].errors?.['required']">Este campo es requerido
+      </span>
+      <span *ngIf="formEditAlumn.controls['telefono'].errors?.['maxlength']">Maximo 10 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['telefono'].errors?.['minlength']">Minimo 7 caracteres.
+      </span>
+      <span *ngIf="formEditAlumn.controls['telefono'].errors?.['pattern']">Teléfono inválido.
+      </span>
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <div mat-dialog-actions class="position-button">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button color="primary" type="submit" mat-raised-button [disabled]="!formEditAlumn.valid">
+      Guardar
+    </button>
+  </div>
+
+</form>

@@ -1,0 +1,22 @@
+<div class="m-50">
+    <mat-grid-list cols="4" rowHeight="500px">
+        <mat-grid-tile *ngFor="let data of dataSource">
+            <mat-card>
+                <img mat-card-image src="{{data.imagen}}" alt="">
+                <mat-card-header>
+                    <mat-card-title>{{data.nombre | uppercase}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="pt-10">
+                    <mat-card-subtitle><b>Edad:</b> {{data.edad}} años</mat-card-subtitle>
+                    <mat-card-subtitle><b>Email:</b> {{data.email}}</mat-card-subtitle>
+                    <mat-card-subtitle><b>Dirección:</b> {{data.direccion}}</mat-card-subtitle>
+                    <mat-card-subtitle><b>Teléfono:</b> {{data.telefono}}</mat-card-subtitle>
+                </mat-card-content>
+                <!-- <mat-card-actions align="end">
+                    <button mat-button (click)="editAlumn(data)">Editarm</button>
+                    <button mat-button (click)="deleteAlumn()">Eliminar</button>
+                </mat-card-actions> -->
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
