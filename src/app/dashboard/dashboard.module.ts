@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdministradorComponent } from './administrador.component';
+import { DashboardComponent } from './dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,7 +22,7 @@ import { CardsComponent } from '../cards/cards.component';
 
 @NgModule({
   declarations: [
-    AdministradorComponent,
+    DashboardComponent,
     AlumnosComponent,
     EditarComponent,
     FormularioComponent,
@@ -46,7 +46,7 @@ import { CardsComponent } from '../cards/cards.component';
     MatGridListModule
   ],
   exports: [
-    AdministradorComponent,
+    DashboardComponent,
     AlumnosComponent,
     FormularioComponent,
     EditarComponent
